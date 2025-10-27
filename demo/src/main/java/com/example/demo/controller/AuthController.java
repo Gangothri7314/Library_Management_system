@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
+import java.util.*; // ✅ for Map and Optional
 
 @RestController
 @RequestMapping("/api/auth")
@@ -58,13 +58,19 @@ public class AuthController {
             return ResponseEntity.badRequest().body("Invalid email or password");
         }
 
-        // (Optional) Check if account is active
-        if (!user.isActive()) {
+        if (!user.getActive()) {
             return ResponseEntity.badRequest().body("Account is not active");
         }
 
-        // For now we just return success message — JWT can be added later
         return ResponseEntity.ok("Login successful");
     }
-}
 
+    // ✅ FORGOT PASSWORD endpoint (fixed)
+    @PostMapping("/forgot-password")
+    public ResponseEntity<?> forgotPassword(@RequestBody Map<String, String> request) {
+        String email = request.get("email");
+        System.out.println("Forgot password called for email: " + email);
+        return ResponseEntity.ok("Reset link (mock) sent to " + email);
+    }
+
+}
