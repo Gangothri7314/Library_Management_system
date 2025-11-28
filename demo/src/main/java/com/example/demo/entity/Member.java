@@ -1,36 +1,26 @@
-// User.java
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "members")
+public class Member {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-
     private String email;
-
-    private String password;
-     private String contact;
-     private String planType;
-     private Double fees;
-
-    private String role = "USER"; // default role
-
-    @Column(nullable = false)
-    private Boolean active = true;
-    // default active
+    private String contact;
+    private String planType; // STANDARD / PREMIUM
+    private Double fees;
     private LocalDate joinDate;
-     private LocalDate expiryDate;
+    private LocalDate expiryDate;
 
-    // Getters and setters
+    public Member() {}
+
+    // Getters & Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -40,23 +30,7 @@ public class User {
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
 
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
-
-    public String getRole() { return role; }
-    public void setRole(String role) { this.role = role; }
-
-    public Boolean getActive() { return active; }
-    public void setActive(Boolean active) { this.active = active; }
-
-    public void setVerified(boolean b) {
-    }
-
-    public boolean isActive() {
-        return active;
-
-    }
-
+    public String getContact() { return contact; }
     public void setContact(String contact) { this.contact = contact; }
 
     public String getPlanType() { return planType; }
