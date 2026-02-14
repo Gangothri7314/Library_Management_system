@@ -12,7 +12,7 @@ public class UserService {
     public List<Map<String,Object>> getBorrowStatus(){
         // mock single entry to demo
         Map<String,Object> m = new HashMap<>();
-        m.put("name","John Doe");
+        m.put("name","Gangothri");
         m.put("bookTitle","Java Basics");
         m.put("status","BORROWED");
         m.put("fine",0);
