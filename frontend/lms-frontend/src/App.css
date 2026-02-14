@@ -1,0 +1,134 @@
+/* App.css - Clean version for Auth pages */
+
+/* ---------- Global Styles ---------- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+/* ---------- Centered Layout ---------- */
+.centered-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* ---------- Auth Card ---------- */
+.auth-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Heading ---------- */
+.auth-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Inputs & Dropdown ---------- */
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+/* Focus effect */
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #3b82f6; /* Tailwind blue-500 */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+/* Dropdown arrow customization */
+.auth-card select {
+  appearance: none;
+  background: #f9fafb
+    url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>")
+    no-repeat right 12px center;
+  background-size: 18px;
+}
+
+/* ---------- Buttons ---------- */
+.auth-card button {
+  width: 100%;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-card button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* ---------- Links ---------- */
+.auth-card .link {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.auth-card .link a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.auth-card .link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Messages ---------- */
+.auth-card .error {
+  color: #ef4444;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.auth-card .success {
+  color: #22c55e; /* Tailwind green-500 */
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+

@@ -1,0 +1,93 @@
+/* BookCard.css */
+.bc-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(16,24,40,0.06);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bc-card:hover { transform: translateY(-6px); }
+
+.bc-cover {
+  position: relative;
+  height: 190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  padding: 18px;
+}
+.bc-cover img {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(16,24,40,0.06);
+}
+
+.bc-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 12px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.bc-badge.available { background: linear-gradient(90deg,#10b981,#06b6d4); }
+.bc-badge.borrowed { background: linear-gradient(90deg,#ef4444,#f97316); }
+
+.bc-body {
+  padding: 16px;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+  flex: 1;
+}
+
+.bc-title {
+  margin: 0;
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.bc-author { margin: 0; color: #475569; font-size: 14px; }
+
+.bc-meta {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.meta-val { font-weight: 700; color: #0f172a; margin-top:4px; }
+
+.bc-actions { margin-top: auto; }
+
+.bc-btn {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.bc-btn.borrow {
+  background: linear-gradient(90deg,#2563eb,#4f46e5);
+  color: #fff;
+}
+
+.bc-btn.disabled {
+  background: #e6e9ee;
+  color:#64748b;
+  cursor:not-allowed;
+}

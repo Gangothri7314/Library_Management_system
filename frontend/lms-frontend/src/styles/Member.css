@@ -1,0 +1,7 @@
+.page { padding: 20px; max-width: 900px; margin: 0 auto; }
+.simple-table { width: 100%; border-collapse: collapse; }
+.simple-table th, .simple-table td { border: 1px solid #ddd; padding: 8px; text-align:left; }
+.simple-table th { background:#f4f4f4; }
+.modal { margin-top: 1rem; padding: 1rem; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06);}
+.form input, .form select { display:block; margin-bottom:8px; padding:8px; width:100%; }
+.form button { margin-right:8px; padding:8px 12px; }

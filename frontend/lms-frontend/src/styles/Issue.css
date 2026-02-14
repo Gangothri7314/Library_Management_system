@@ -1,0 +1,5 @@
+.issue-form { max-width: 600px; background:#fff; padding:16px; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.04); }
+.issue-form label { display:block; margin:8px 0 4px; }
+.issue-form select { width:100%; padding:8px; margin-bottom:12px; }
+.issue-form button { padding:8px 12px; }
+.message { margin-top:12px; color: green; }

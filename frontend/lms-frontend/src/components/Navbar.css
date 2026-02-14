@@ -1,0 +1,110 @@
+/* ===== NAVBAR STYLING ===== */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height:50px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  padding: 0.9rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Brand section */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1150px;   /* slightly reduce width */
+  margin: 0 auto;
+  padding: 0 1rem;     /* adds balanced spacing left/right */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;         /* reduced gap between Login/Register */
+  margin-right: 0.5rem; /* moves buttons slightly left */
+}
+
+
+.logo-icon {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Links section */
+
+/* Normal link */
+.nav-item {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #ffddf4;
+}
+
+/* Register button */
+.register-btn {
+  background: white;
+  color: #6a11cb;
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.register-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-1px);
+}
+
+/* Logout button */
+.logout-btn {
+  background: white;
+  color: #e11d48;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #ffe4e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+}
+
